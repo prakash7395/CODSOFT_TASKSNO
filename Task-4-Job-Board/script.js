@@ -61,9 +61,11 @@ function searchJobs() {
     });
 }
 
+
 function viewJob(jobTitle) {
     window.location.href = "job-details.html";
 }
+
 
 function submitApplication(event) {
     event.preventDefault();
@@ -75,6 +77,7 @@ function submitApplication(event) {
     window.location.href = "index.html";
 }
 
+
 function loginUser(event) {
     event.preventDefault();
 
@@ -82,6 +85,8 @@ function loginUser(event) {
 
     window.location.href = "index.html";
 }
+
+
 function postJob(event) {
     event.preventDefault();
 
