@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,7 +15,9 @@
     <!-- Header -->
     <header>
 
-        <div class="logo">JobBoard</div>
+        <div class="logo">
+            JobBoard
+        </div>
 
         <nav>
             <a href="index.html">Home</a>
@@ -29,114 +30,183 @@
     </header>
 
 
-    <!-- Main Content -->
-    <main>
+    <!-- Hero Section -->
+    <section class="hero">
 
-        <!-- Hero Section -->
-        <section class="hero">
+        <div class="hero-content">
 
-            <h1>Find Your Dream Job</h1>
-
-            <p>
-                Search for jobs and take the next step in your career.
+            <p class="welcome">
+                WELCOME TO JOBBOARD
             </p>
 
+            <h1>
+                Find Your Dream Job
+            </h1>
+
+            <p class="hero-text">
+                Discover exciting career opportunities and take
+                the next step toward your future.
+            </p>
+
+
+            <!-- Search -->
             <div class="search-box">
 
                 <input
                     type="text"
                     id="searchInput"
-                    placeholder="Search jobs..."
+                    placeholder="Search job title, company or location..."
                 >
 
                 <button onclick="searchJobs()">
-                    Search
+                    Search Jobs
                 </button>
 
             </div>
 
             <div id="searchResults"></div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- Featured Jobs -->
-        <section class="featured">
+    <!-- Featured Jobs -->
+    <section class="featured">
 
-            <h2>Featured Jobs</h2>
+        <p class="section-small">
+            EXPLORE OPPORTUNITIES
+        </p>
 
-            <div class="job-container">
+        <h2>
+            Featured Jobs
+        </h2>
+
+        <p class="section-text">
+            Find the right opportunity for your skills and career goals.
+        </p>
 
 
-                <!-- Job 1 -->
-                <div class="job-card">
+        <div class="job-container">
 
-                    <h3>Frontend Developer</h3>
 
-                    <p>
-                        Tech Solutions
-                    </p>
+            <!-- Job 1 -->
+            <div class="job-card">
 
-                    <p>
-                        📍 Chennai, India
-                    </p>
-
-                    <button onclick="viewJob('Frontend Developer')">
-                        View Job
-                    </button>
-
+                <div class="job-icon">
+                    💻
                 </div>
 
+                <h3>
+                    Frontend Developer
+                </h3>
 
-                <!-- Job 2 -->
-                <div class="job-card">
+                <p class="company">
+                    Tech Solutions
+                </p>
 
-                    <h3>Web Developer</h3>
+                <p>
+                    📍 Chennai, India
+                </p>
 
-                    <p>
-                        Digital Works
-                    </p>
+                <p>
+                    💼 Full Time
+                </p>
 
-                    <p>
-                        📍 Bangalore, India
-                    </p>
+                <p>
+                    💰 ₹4 - ₹7 LPA
+                </p>
 
-                    <button onclick="viewJob('Web Developer')">
-                        View Job
-                    </button>
-
-                </div>
-
-
-                <!-- Job 3 -->
-                <div class="job-card">
-
-                    <h3>JavaScript Developer</h3>
-
-                    <p>
-                        Innovate Labs
-                    </p>
-
-                    <p>
-                        📍 Hyderabad, India
-                    </p>
-
-                    <button onclick="viewJob('JavaScript Developer')">
-                        View Job
-                    </button>
-
-                </div>
-
+                <button onclick="viewJob('Frontend Developer')">
+                    View Details
+                </button>
 
             </div>
 
-        </section>
 
-    </main>
+            <!-- Job 2 -->
+            <div class="job-card">
+
+                <div class="job-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Web Developer
+                </h3>
+
+                <p class="company">
+                    Digital Works
+                </p>
+
+                <p>
+                    📍 Bangalore, India
+                </p>
+
+                <p>
+                    💼 Full Time
+                </p>
+
+                <p>
+                    💰 ₹5 - ₹8 LPA
+                </p>
+
+                <button onclick="viewJob('Web Developer')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <!-- Job 3 -->
+            <div class="job-card">
+
+                <div class="job-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    JavaScript Developer
+                </h3>
+
+                <p class="company">
+                    Innovate Labs
+                </p>
+
+                <p>
+                    📍 Hyderabad, India
+                </p>
+
+                <p>
+                    💼 Full Time
+                </p>
+
+                <p>
+                    💰 ₹4 - ₹6 LPA
+                </p>
+
+                <button onclick="viewJob('JavaScript Developer')">
+                    View Details
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
 
 
     <!-- Footer -->
     <footer>
+
+        <h3>
+            JobBoard
+        </h3>
+
+        <p>
+            Find your dream job and build your future.
+        </p>
 
         <p>
             © 2026 JobBoard. All rights reserved.
