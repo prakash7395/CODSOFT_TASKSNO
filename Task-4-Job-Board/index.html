@@ -1,1 +1,79 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobBoard - Find Your Dream Job</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">JobBoard</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Find Your Dream Job</h1>
+            <p>Search for jobs and take the next step in your career.</p>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search jobs...">
+                <button onclick="searchJobs()">Search</button>
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2>Featured Jobs</h2>
+
+            <div class="job-container">
+
+                <div class="job-card">
+                    <h3>Frontend Developer</h3>
+                    <p>Tech Solutions</p>
+                    <p>📍 Chennai, India</p>
+                    <button onclick="viewJob('Frontend Developer')">
+                        View Job
+                    </button>
+                </div>
+
+                <div class="job-card">
+                    <h3>Web Developer</h3>
+                    <p>Digital Works</p>
+                    <p>📍 Bangalore, India</p>
+                    <button onclick="viewJob('Web Developer')">
+                        View Job
+                    </button>
+                </div>
+
+                <div class="job-card">
+                    <h3>JavaScript Developer</h3>
+                    <p>Innovate Labs</p>
+                    <p>📍 Hyderabad, India</p>
+                    <button onclick="viewJob('JavaScript Developer')">
+                        View Job
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 JobBoard. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
