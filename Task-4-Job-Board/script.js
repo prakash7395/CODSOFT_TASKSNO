@@ -82,3 +82,17 @@ function loginUser(event) {
 
     window.location.href = "index.html";
 }
+function postJob(event) {
+    event.preventDefault();
+
+    const jobTitle = document.getElementById("jobTitle").value;
+    const companyName = document.getElementById("companyName").value;
+
+    alert(
+        "Job posted successfully!\n\n" +
+        "Job: " + jobTitle +
+        "\nCompany: " + companyName
+    );
+
+    window.location.href = "employer-dashboard.html";
+}
