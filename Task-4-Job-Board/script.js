@@ -11,5 +11,15 @@ function searchJobs() {
 }
 
 function viewJob(jobTitle) {
-    alert("You selected: " + jobTitle);
+    window.location.href = "job-details.html";
+}
+
+function submitApplication(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    alert("Application submitted successfully, " + name + "!");
+
+    window.location.href = "index.html";
 }
