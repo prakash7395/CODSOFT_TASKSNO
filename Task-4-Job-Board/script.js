@@ -23,3 +23,18 @@ function submitApplication(event) {
 
     window.location.href = "index.html";
 }
+function loginUser(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    if (email === "" || password === "") {
+        alert("Please enter email and password.");
+        return;
+    }
+
+    alert("Login successful!");
+
+    window.location.href = "index.html";
+}
