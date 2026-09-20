@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job - JobBoard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">JobBoard</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="featured">
+
+            <div class="job-card">
+
+                <h2>Apply for Frontend Developer</h2>
+
+                <form onsubmit="submitApplication(event)">
+
+                    <label>Full Name</label><br>
+                    <input type="text" id="name" required><br><br>
+
+                    <label>Email</label><br>
+                    <input type="email" id="email" required><br><br>
+
+                    <label>Phone Number</label><br>
+                    <input type="tel" id="phone" required><br><br>
+
+                    <label>Upload Resume</label><br>
+                    <input type="file" id="resume" accept=".pdf,.doc,.docx" required><br><br>
+
+                    <label>Cover Letter</label><br>
+                    <textarea id="coverLetter" rows="6" required></textarea><br><br>
+
+                    <button type="submit">Submit Application</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 JobBoard. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
