@@ -6,62 +6,59 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #222;
-    line-height: 1.6;
+    background: #f0f4f8;
+    color: #1e293b;
 }
 
 /* Header */
 
 header {
-    background: #1f2937;
+    background: #0f172a;
     color: white;
-    padding: 18px 6%;
+    padding: 20px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 nav {
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
-    gap: 18px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 15px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    color: #60a5fa;
+    color: #38bdf8;
 }
 
 /* Hero */
 
 .hero {
     text-align: center;
-    padding: 90px 20px;
-    background: #e8f0fe;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: white;
 }
 
 .hero h1 {
-    font-size: 46px;
+    font-size: 50px;
     margin-bottom: 15px;
-    color: #1f2937;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #555;
+    font-size: 20px;
+    margin-bottom: 35px;
 }
 
 /* Search */
@@ -76,37 +73,36 @@ nav a:hover {
 
 .search-box input {
     flex: 1;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
     font-size: 16px;
 }
 
 button {
-    padding: 14px 22px;
+    padding: 14px 24px;
     border: none;
-    border-radius: 6px;
-    background: #2563eb;
+    border-radius: 8px;
+    background: #0f172a;
     color: white;
     cursor: pointer;
-    font-size: 15px;
+    font-weight: bold;
 }
 
 button:hover {
-    background: #1d4ed8;
+    background: #334155;
 }
 
 /* Sections */
 
 .featured {
-    padding: 60px 6%;
+    padding: 70px 6%;
 }
 
 .featured h2 {
     text-align: center;
-    margin-bottom: 35px;
-    font-size: 32px;
-    color: #1f2937;
+    font-size: 34px;
+    margin-bottom: 40px;
 }
 
 /* Job Cards */
@@ -114,30 +110,31 @@ button:hover {
 .job-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 30px;
 }
 
 .job-card {
     background: white;
-    padding: 28px;
-    border-radius: 12px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
 }
 
 .job-card h2,
 .job-card h3 {
-    color: #1f2937;
+    color: #0f172a;
     margin-bottom: 15px;
 }
 
 .job-card p {
     margin-bottom: 10px;
-    color: #555;
-}
-
-.job-card button {
-    margin-top: 10px;
+    color: #475569;
 }
 
 /* Forms */
@@ -146,10 +143,10 @@ button:hover {
 .job-card form textarea,
 .job-card form select {
     width: 100%;
-    padding: 12px;
+    padding: 13px;
     margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
     font-size: 15px;
 }
 
@@ -162,22 +159,15 @@ button:hover {
 #searchResults {
     max-width: 900px;
     margin: 35px auto 0;
-    text-align: left;
-}
-
-#searchResults h2 {
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 /* Footer */
 
 footer {
     text-align: center;
-    background: #1f2937;
+    background: #0f172a;
     color: white;
-    padding: 22px;
-    margin-top: 30px;
+    padding: 25px;
 }
 
 /* Mobile */
@@ -192,23 +182,14 @@ footer {
 
     nav {
         justify-content: center;
-        gap: 10px;
-    }
-
-    .hero {
-        padding: 60px 15px;
     }
 
     .hero h1 {
-        font-size: 34px;
+        font-size: 36px;
     }
 
     .search-box {
         flex-direction: column;
-    }
-
-    .search-box input {
-        width: 100%;
     }
 
     .job-container {
@@ -216,6 +197,6 @@ footer {
     }
 
     .featured {
-        padding: 40px 20px;
+        padding: 45px 20px;
     }
 }
