@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post a Job - JobBoard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">JobBoard</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="candidate-dashboard.html">Candidate Dashboard</a>
+            <a href="employer-dashboard.html">Employer Dashboard</a>
+            <a href="login.html">Login</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="featured">
+
+            <div class="job-card">
+
+                <h2>Post a New Job</h2>
+
+                <form onsubmit="postJob(event)">
+
+                    <label>Job Title</label>
+                    <br>
+                    <input type="text" id="jobTitle" required>
+
+                    <br><br>
+
+
+                    <label>Company Name</label>
+                    <br>
+                    <input type="text" id="companyName" required>
+
+                    <br><br>
+
+
+                    <label>Location</label>
+                    <br>
+                    <input type="text" id="jobLocation" required>
+
+                    <br><br>
+
+
+                    <label>Job Type</label>
+                    <br>
+
+                    <select id="jobType" required>
+                        <option value="">Select Job Type</option>
+                        <option value="Full Time">Full Time</option>
+                        <option value="Part Time">Part Time</option>
+                        <option value="Internship">Internship</option>
+                    </select>
+
+                    <br><br>
+
+
+                    <label>Salary</label>
+                    <br>
+                    <input type="text" id="jobSalary" placeholder="Example: ₹4 - ₹7 LPA" required>
+
+                    <br><br>
+
+
+                    <label>Job Description</label>
+                    <br>
+
+                    <textarea
+                        id="jobDescription"
+                        rows="6"
+                        required
+                    ></textarea>
+
+                    <br><br>
+
+
+                    <label>Required Skills</label>
+                    <br>
+
+                    <input
+                        type="text"
+                        id="jobSkills"
+                        placeholder="HTML, CSS, JavaScript"
+                        required
+                    >
+
+                    <br><br>
+
+
+                    <button type="submit">
+                        Post Job
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 JobBoard. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
