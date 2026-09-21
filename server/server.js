@@ -57,7 +57,7 @@ app.post("/api/projects", async (req, res) => {
   }
 });
 
-// Add a task to a project
+// Add a task
 app.post("/api/projects/:projectId/tasks", async (req, res) => {
   try {
     const { projectId } = req.params;
@@ -145,7 +145,7 @@ app.patch(
   }
 );
 
-// Delete a project
+// Delete project
 app.delete("/api/projects/:projectId", async (req, res) => {
   try {
     const project = await Project.findByIdAndDelete(
@@ -169,16 +169,19 @@ app.delete("/api/projects/:projectId", async (req, res) => {
   }
 });
 
-// Connect to MongoDB and start server
+// Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB connected successfully");
 
-    app.listen(PORT, () => {
+    app.listen(PORT, "0.0.0.0", () => {
       console.log(`Server running at http://localhost:${PORT}`);
     });
   })
   .catch((error) => {
-    console.error("MongoDB connection failed:", error.message);
+    console.error(
+      "MongoDB connection failed:",
+      error.message
+    );
   });
