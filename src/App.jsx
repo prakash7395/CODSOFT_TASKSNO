@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-const API_URL = "http://localhost:5000/api/projects";
+const API_URL =
+  "https://project-management-tool-codsoft.onrender.com/api/projects";
 
 function App() {
   const [projects, setProjects] = useState([]);
@@ -16,7 +17,7 @@ function App() {
 
   const [loading, setLoading] = useState(true);
 
-  // Load projects from MongoDB
+  // Load projects from the live backend
   useEffect(() => {
     fetchProjects();
   }, []);
@@ -66,10 +67,7 @@ function App() {
         throw new Error(data.message || "Failed to create project");
       }
 
-      setProjects((currentProjects) => [
-        data,
-        ...currentProjects,
-      ]);
+      setProjects((currentProjects) => [data, ...currentProjects]);
 
       setProjectName("");
       setProjectDescription("");
@@ -214,8 +212,7 @@ function App() {
   };
 
   const totalTasks = projects.reduce(
-    (total, project) =>
-      total + project.tasks.length,
+    (total, project) => total + project.tasks.length,
     0
   );
 
@@ -239,7 +236,6 @@ function App() {
 
   return (
     <div className="app">
-
       <header className="header">
         <div className="header-content">
           <div>
@@ -256,9 +252,7 @@ function App() {
       </header>
 
       <main className="container">
-
         <section className="stats">
-
           <div className="stat-card">
             <div className="stat-icon">📁</div>
             <div>
@@ -290,13 +284,10 @@ function App() {
               <strong>{completedTasks}</strong>
             </div>
           </div>
-
         </section>
 
         <section className="forms">
-
           <div className="form-card">
-
             <div className="form-title">
               <span className="form-number">01</span>
 
@@ -307,7 +298,6 @@ function App() {
             </div>
 
             <form onSubmit={addProject}>
-
               <label>Project Name</label>
 
               <input
@@ -332,13 +322,10 @@ function App() {
               <button type="submit">
                 + Create Project
               </button>
-
             </form>
-
           </div>
 
           <div className="form-card">
-
             <div className="form-title">
               <span className="form-number">02</span>
 
@@ -349,7 +336,6 @@ function App() {
             </div>
 
             <form onSubmit={addTask}>
-
               <label>Select Project</label>
 
               <select
@@ -358,10 +344,7 @@ function App() {
                   setSelectedProject(e.target.value)
                 }
               >
-
-                <option value="">
-                  Select Project
-                </option>
+                <option value="">Select Project</option>
 
                 {projects.map((project) => (
                   <option
@@ -371,7 +354,6 @@ function App() {
                     {project.name}
                   </option>
                 ))}
-
               </select>
 
               <label>Task Name</label>
@@ -409,15 +391,11 @@ function App() {
               <button type="submit">
                 + Add Task
               </button>
-
             </form>
-
           </div>
-
         </section>
 
         <section className="projects">
-
           <div className="section-heading">
             <div>
               <h2>My Projects</h2>
@@ -432,18 +410,14 @@ function App() {
           </div>
 
           {loading ? (
-
             <div className="empty">
               <h3>Loading projects...</h3>
               <p>
-                Connecting to MongoDB through the backend.
+                Connecting to the live backend.
               </p>
             </div>
-
           ) : projects.length === 0 ? (
-
             <div className="empty">
-
               <div className="empty-icon">📁</div>
 
               <h3>No projects yet</h3>
@@ -451,22 +425,15 @@ function App() {
               <p>
                 Create your first project using the form above.
               </p>
-
             </div>
-
           ) : (
-
             projects.map((project) => (
-
               <div
                 className="project-card"
                 key={project._id}
               >
-
                 <div className="project-header">
-
                   <div className="project-info">
-
                     <div className="project-icon">
                       📁
                     </div>
@@ -479,11 +446,9 @@ function App() {
                           "No description provided"}
                       </p>
                     </div>
-
                   </div>
 
                   <div className="project-actions">
-
                     <span className="task-count">
                       {project.tasks.length} Tasks
                     </span>
@@ -497,31 +462,22 @@ function App() {
                     >
                       Delete
                     </button>
-
                   </div>
-
                 </div>
 
                 {project.tasks.length === 0 ? (
-
                   <div className="no-task">
                     <span>📋</span>
                     No tasks added to this project yet.
                   </div>
-
                 ) : (
-
                   <div className="task-list">
-
                     {project.tasks.map((task) => (
-
                       <div
                         className="task"
                         key={task._id}
                       >
-
                         <div className="task-info">
-
                           <div className="task-check">
                             {task.status === "Completed"
                               ? "✓"
@@ -529,11 +485,9 @@ function App() {
                           </div>
 
                           <div>
-
                             <h4>{task.name}</h4>
 
                             <div className="task-details">
-
                               <span>
                                 👤 {task.assignee}
                               </span>
@@ -541,11 +495,8 @@ function App() {
                               <span>
                                 📅 {task.deadline}
                               </span>
-
                             </div>
-
                           </div>
-
                         </div>
 
                         <select
@@ -561,29 +512,18 @@ function App() {
                             )
                           }
                         >
-
                           <option>To Do</option>
                           <option>In Progress</option>
                           <option>Completed</option>
-
                         </select>
-
                       </div>
-
                     ))}
-
                   </div>
-
                 )}
-
               </div>
-
             ))
-
           )}
-
         </section>
-
       </main>
 
       <footer>
@@ -592,7 +532,6 @@ function App() {
           Node.js & MongoDB
         </p>
       </footer>
-
     </div>
   );
 }
