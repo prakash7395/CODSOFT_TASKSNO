@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 const API_URL =
-  "https://project-management-tool-codsoft.onrender.com/api/projects";
+  "https://project-management-tool-codsoft-1.onrender.com/api/projects";
 
 function App() {
   const [projects, setProjects] = useState([]);
