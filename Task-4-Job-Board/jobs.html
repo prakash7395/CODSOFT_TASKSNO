@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - JobBoard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">JobBoard</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="featured">
+            <h2>Available Jobs</h2>
+
+            <div class="job-container">
+
+                <div class="job-card">
+                    <h3>Frontend Developer</h3>
+                    <p><strong>Company:</strong> Tech Solutions</p>
+                    <p>📍 Chennai, India</p>
+                    <p>💼 Full Time</p>
+                    <p>💰 ₹4 - ₹7 LPA</p>
+                    <button onclick="viewJob('Frontend Developer')">
+                        View Details
+                    </button>
+                </div>
+
+                <div class="job-card">
+                    <h3>Web Developer</h3>
+                    <p><strong>Company:</strong> Digital Works</p>
+                    <p>📍 Bangalore, India</p>
+                    <p>💼 Full Time</p>
+                    <p>💰 ₹5 - ₹8 LPA</p>
+                    <button onclick="viewJob('Web Developer')">
+                        View Details
+                    </button>
+                </div>
+
+                <div class="job-card">
+                    <h3>JavaScript Developer</h3>
+                    <p><strong>Company:</strong> Innovate Labs</p>
+                    <p>📍 Hyderabad, India</p>
+                    <p>💼 Full Time</p>
+                    <p>💰 ₹4 - ₹6 LPA</p>
+                    <button onclick="viewJob('JavaScript Developer')">
+                        View Details
+                    </button>
+                </div>
+
+                <div class="job-card">
+                    <h3>UI Developer</h3>
+                    <p><strong>Company:</strong> Creative Tech</p>
+                    <p>📍 Chennai, India</p>
+                    <p>💼 Full Time</p>
+                    <p>💰 ₹3 - ₹6 LPA</p>
+                    <button onclick="viewJob('UI Developer')">
+                        View Details
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 JobBoard. All rights reserved.</p>
+    </footer>
+    <script>
+    filterJobs();
+</script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
